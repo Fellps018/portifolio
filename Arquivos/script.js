@@ -1,45 +1,26 @@
 // Dados simulados
 const skills = [
-  {name: "Node.js", icon: "fa-brands fa-node" },
-  {name: "Express", icon: "fa-solid fa-server" },
-  {name: "JavaScript", icon: "fa-brands fa-js" },
-  {name: "MySQL", icon: "fa-solid fa-database" },
-  {name: "PostgreSQL", icon: "fa-solid fa-database" },
-  {name: "REST APIs", icon: "fa-solid fa-cloud" },
-  {name: "Java", icon: "fa-brands fa-java" },
+  {name: "Java", icon: "fa-brands fa-java"},
   {name: "Spring Boot", icon: "fa-solid fa-leaf"},
+  {name: "REST APIs", icon: "fa-solid fa-cloud"},
   {name: "Python", icon: "fa-brands fa-python"},
   {name: "Excel", icon: "fa-solid fa-table"},
-  {name: "Git", icon: "fa-brands fa-git-alt" },
+  {name: "MySQL", icon: "fa-solid fa-database"},
+  {name: "PostgreSQL", icon: "fa-solid fa-database"},
+  {name: "Git", icon: "fa-brands fa-git-alt"},
   {name: "GitHub", icon: "fa-brands fa-github"},
 ];
 
 const projects = [
   {
-    title: "API de Loja Virtual",
+    title: "",
     description:
-      "Backend completo para e-commerce com Express, MongoDB e autenticação JWT. Implementa CRUD de produtos, carrinho de compras e sistema de pedidos.",
-    technologies: ["Node.js", "Express", "MongoDB", "JWT"],
-    githubLink: "https://github.com/usuario/api-loja",
-    demoLink: "#",
+      "",
+    technologies: ["", "", "", ""],
+    githubLink: "",
+    demoLink: "",
   },
-  {
-    title: "Microserviço de Pagamentos",
-    description:
-      "Sistema distribuído de processamento de pagamentos usando Node.js, RabbitMQ para mensageria e PostgreSQL para armazenamento de transações.",
-    technologies: ["Node.js", "RabbitMQ", "PostgreSQL", "Docker"],
-    githubLink: "https://github.com/usuario/ms-pagamentos",
-    demoLink: "#",
-  },
-  {
-    title: "API de Autenticação",
-    description:
-      "Sistema de autenticação e autorização com OAuth 2.0, tokens JWT e refresh tokens. Inclui recuperação de senha e verificação de email.",
-    technologies: ["Node.js", "OAuth 2.0", "JWT", "Redis"],
-    githubLink: "https://github.com/usuario/auth-api",
-    demoLink: "#",
-  },
-  
+ 
 ];
 
 // Renderizar skills
