@@ -10,6 +10,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="images/icone.png">
+  <style>
+    /* Adicionei este estilo para corrigir a imagem na seção de contato */
+    #contact {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .section-wapaper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      filter: blur(8px); /* Aplicando o desfoque */
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -28,6 +46,8 @@
   </header>
 
   <main>
+    <img class="set" src="images/technology-8760347_1280.jpg">
+    <div class="wapaper"></div>
     <section id="hero" class="hero">
       <div class="hero-content">
         <h2>Desenvolvedor Back-end</h2>
@@ -51,13 +71,14 @@
             <p>Além do desenvolvimento, tenho interesse em arquitetura de software, segurança da informação e otimização de sistemas distribuídos.</p>
           </div>
           <div class="about-image">
-            <div class="image-placeholder"></div>
+            <img class="image-placeholder" src="images/perfil_trabalho.jpeg">
           </div>
         </div>
       </div>
     </section>
 
     <section id="skills" class="skills section">
+    <img class="section-wapaper" src="images/post-02.jpg">
       <div class="section-container">
         <h2 class="section-title">Minhas Skills</h2>
         <div class="skills-grid">
@@ -67,6 +88,7 @@
     </section>
 
     <section id="projects" class="projects section">
+    <img class="section-wapaper" src="images/technology-8760347_1280.jpg">
       <div class="section-container">
         <h2 class="section-title">Projetos Recentes</h2>
         <div class="projects-grid">
@@ -76,6 +98,8 @@
     </section>
 
     <section id="contact" class="contact section">
+      <!-- Adicionei o caminho correto para uma imagem e apliquei o desfoque -->
+      <img class="section-wapaper" src="images/icon-minimalism-black-white-minimal-smartphone-monitor-world.webp">
       <div class="section-container">
         <h2 class="section-title">Vamos conversar</h2>
         <div class="contact-content">
@@ -109,7 +133,7 @@
     <div class="footer-container">
       <div class="footer-content">
         <div class="footer-logo">
-          <h3>Felipe<span>Catarino</span></h3>
+          <h3>FelipeCatarino</h3>
           <p>Desenvolvedor Back-end</p>
         </div>
         <div class="footer-links">

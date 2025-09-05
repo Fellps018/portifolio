@@ -1,28 +1,27 @@
 /* Variáveis de cores */
 :root {
     --primary: #4CAF50;
-        /* Verde médio/claro */
-        --primary-dark: #388E3C;
-        /* Verde mais escuro */
-        --secondary: #212121;
-        /* Preto quase puro */
-        --dark: #424242;
-        /* Cinza escuro */
-        --darker: #121212;
-        /* Preto mais intenso */
-        --light: #f5f5f5;
-        /* Cinza muito claro */
-        --gray: #9E9E9E;
-        /* Cinza médio */
-        --dark-gray: #616161;
-        /* Cinza escuro */
-        --success: #4CAF50;
-        /* Verde para sucesso */
-        --warning: #FFC107;
-        /* Âmbar para avisos */
-        --danger: #F44336;
+    /* Verde médio/claro */
+    --primary-dark: #388E3C;
+    /* Verde mais escuro */
+    --secondary: #212121;
+    /* Preto quase puro */
+    --dark: #424242;
+    /* Cinza escuro */
+    --darker: #121212;
+    /* Preto mais intenso */
+    --light: #f5f5f5;
+    /* Cinza muito claro */
+    --gray: #9E9E9E;
+    /* Cinza médio */
+    --dark-gray: #616161;
+    /* Cinza escuro */
+    --success: #4CAF50;
+    /* Verde para sucesso */
+    --warning: #FFC107;
+    /* Âmbar para avisos */
+    --danger: #F44336;
 }
-
 
 /* Reset e configurações básicas */
 * {
@@ -35,6 +34,15 @@ html {
     scroll-behavior: smooth;
 }
 
+.set {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--darker);
@@ -42,8 +50,9 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
+
 body::-webkit-scrollbar {
-    display: none; 
+    display: none;
 }
 
 /* Tipografia */
@@ -73,14 +82,21 @@ a {
 }
 
 .btn-primary {
-    background-color: var(--primary);
+    background-color: black;
     color: white;
-    border: none;
+    border: solid 1px white;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-dark);
-    border: none;
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+}
+
+.btn-primary:active {
+    background-color: rgba(187, 187, 187, 0.596);
+    color: rgb(0, 0, 0);
+    border: solid 1px white;
 }
 
 .btn-secondary {
@@ -106,8 +122,8 @@ a {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.726);
-    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.836);
+    backdrop-filter: blur(32px);
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
@@ -116,7 +132,7 @@ a {
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -140,15 +156,18 @@ a {
 .nav-link {
     color: var(--gray);
     font-weight: 500;
-    transition: color 0.3s;
     display: flex;
+    margin: 0;
     align-items: center;
     gap: 0.5rem;
+    transition: 400ms;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--primary);
+    color: white;
+    transition: 400ms;
+    padding: 0;
 }
 
 .menu-toggle {
@@ -169,7 +188,8 @@ a {
     align-items: center;
     text-align: center;
     padding: 6rem 2rem 4rem;
-    background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+    background-color: transparent;
+    backdrop-filter: blur(24px);
     position: relative;
 }
 
@@ -181,7 +201,7 @@ a {
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    background: linear-gradient(to right, var(--light), var(--primary));
+    background-color: whitesmoke;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -211,14 +231,28 @@ a {
     animation: bounce 2s infinite;
 }
 
+.wapaper {
+    position: absolute;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.24)89%, rgba(0, 0, 0, 0.623)8%, black 2%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1.5;
+}
+
+.about-wall {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
 .hero-scroll a {
     color: var(--light);
     font-size: 1.5rem;
     transition: color 0.3s;
-}
-
-.hero-scroll a:hover {
-    color: var(--primary);
 }
 
 @keyframes bounce {
@@ -243,12 +277,17 @@ a {
 /* Sections */
 .section {
     padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .section-container {
     max-width: 1200px;
     margin: 0 auto;
+    background-color: transparent;
     padding: 0 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .section-title {
@@ -268,8 +307,12 @@ a {
     left: 0;
     width: 100%;
     height: 4px;
-    background: var(--primary);
+    background: rgb(255, 255, 255);
     border-radius: 2px;
+}
+
+#about {
+    background: linear-gradient(to bottom, black 1.5%, rgba(8, 8, 8, 0.24)89%, rgba(221, 221, 221, 0.24)89%, rgba(8, 8, 8, 0.24)89%);
 }
 
 /* About Section */
@@ -278,11 +321,13 @@ a {
     align-items: center;
     gap: 3rem;
     margin-top: 3rem;
+    z-index: 1;
 }
 
 .about-text {
     flex: 1;
     text-align: left;
+    z-index: 1;
 }
 
 .about-text p {
@@ -290,12 +335,26 @@ a {
     color: var(--gray);
     font-size: 1.1rem;
     line-height: 1.8;
+    z-index: 1;
 }
 
 .about-image {
     flex: 1;
     display: flex;
     justify-content: center;
+    z-index: 1;
+}
+
+.section-wapaper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 1px solid rgba(243, 243, 243, 0.322);
 }
 
 .image-placeholder {
@@ -307,7 +366,21 @@ a {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(8, 145, 65, 0.2);
+    transition: 400ms;
+    z-index: 1;
+}
+
+
+#skills {
+    background: transparent;
+    left: 15%;
+    backdrop-filter: (32px);
+    box-shadow: 50px 0 200px rgba(184, 184, 184, 0.336);
+    border: 1px solid gray;
+    width: 70%;
+    border-radius: 25px;
+    height: auto;
+    margin-bottom: 3rem;
 }
 
 /* Skills Section */
@@ -319,24 +392,22 @@ a {
 }
 
 .skill-card {
-    background-color: rgba(0, 0, 0, 0.692);
+    background-color: rgba(24, 24, 24, 0.479);
+    backdrop-filter: blur(38px);
     border-radius: 0.5rem;
     padding: 1.5rem;
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-color: var(--primary);
+    transform: translateY(-22px);
 }
 
 .skill-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--primary);
+    color: cyan;
 }
 
 .skill-name {
@@ -424,6 +495,11 @@ a {
 }
 
 /* Contact Section */
+#contact {
+    background-color: transparent;
+    z-index: 1;
+}
+
 .contact-content {
     display: flex;
     gap: 3rem;
@@ -443,7 +519,7 @@ a {
     width: 100%;
     padding: 1rem;
     background-color: var(--secondary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(16, 55, 163, 0.1);
     border-radius: 0.5rem;
     color: var(--light);
     font-family: inherit;
@@ -453,7 +529,7 @@ a {
 .form-input:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: var(--primary);
+    box-shadow: 0 0 32px rgba(2, 150, 155, 0.418);
 }
 
 .form-textarea {
@@ -482,7 +558,7 @@ a {
 }
 
 .contact-list i {
-    color: var(--primary);
+    color: cyan;
     font-size: 1.25rem;
     width: 30px;
     text-align: center;
@@ -490,13 +566,16 @@ a {
 
 /* Footer */
 .footer {
-    background-color: var(--dark);
+    background-color: transparent;
+    backdrop-filter: blur(32px);
+    z-index: 2;
     padding: 4rem 0 0;
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
+    z-index: 2;
     padding: 0 2rem;
 }
 
@@ -504,12 +583,15 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 3rem;
+    z-index: 2;
     margin-bottom: 3rem;
+
 }
 
 .footer-logo h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    z-index: 2;
 }
 
 .footer-logo span {
@@ -524,6 +606,7 @@ a {
 .footer-social h4 {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
+    z-index: 2;
     color: var(--light);
 }
 
@@ -541,7 +624,7 @@ a {
 }
 
 .footer-links a:hover {
-    color: var(--primary);
+    color: rgb(250, 255, 255);
 }
 
 .social-icons {
@@ -556,13 +639,14 @@ a {
     width: 40px;
     height: 40px;
     background-color: var(--secondary);
-    border-radius: 50%;
+    border-radius: 30%;
     color: var(--light);
     transition: all 0.3s;
 }
 
 .social-icons a:hover {
-    background-color: var(--primary);
+    background-color: rgb(255, 255, 255);
+    color: black;
     transform: translateY(-3px);
 }
 
@@ -572,6 +656,7 @@ a {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--gray);
     font-size: 0.9rem;
+    z-index: 2;
 }
 
 /* Responsividade */
@@ -639,4 +724,5 @@ a {
 
     .btn {
         width: 100%;
-    } }
+    }
+}

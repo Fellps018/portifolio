@@ -1,6 +1,6 @@
 // Dados simulados
 const skills = [
-  {name: "Java", icon: "fa-brands fa-java"},
+  {name: "Java", icon: "fa-brands fa-java "},
   {name: "Spring Boot", icon: "fa-solid fa-leaf"},
   {name: "REST APIs", icon: "fa-solid fa-cloud"},
   {name: "Python", icon: "fa-brands fa-python"},
