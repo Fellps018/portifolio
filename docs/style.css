@@ -429,10 +429,8 @@ a {
 
 /* Projects Section */
 #projects {
-    border-bottom: 1px solid #4b4b4b;
-    border-top: 1px solid #3a3a3a;
-    background-color: #121212;
-    backdrop-filter: blur(24px);
+    
+    background-color: #12121200;
     padding-top: 4%;
     padding-bottom: 9%;
     margin: 0 20px 0 0;
