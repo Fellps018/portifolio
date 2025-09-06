@@ -1,14 +1,14 @@
 // Dados simulados
 const skills = [
-  {name: "Java", icon: "fa-brands fa-java "},
-  {name: "Spring Boot", icon: "fa-solid fa-leaf"},
-  {name: "REST APIs", icon: "fa-solid fa-cloud"},
-  {name: "Python", icon: "fa-brands fa-python"},
-  {name: "Excel", icon: "fa-solid fa-table"},
-  {name: "MySQL", icon: "fa-solid fa-database"},
-  {name: "PostgreSQL", icon: "fa-solid fa-database"},
-  {name: "Git", icon: "fa-brands fa-git-alt"},
-  {name: "GitHub", icon: "fa-brands fa-github"},
+  { name: "Java", icon: "icons/java.png" },
+  { name: "Spring Boot", icon: "icons/spring.png" },
+  { name: "REST APIs", icon: "icons/nuvem.png" },
+  { name: "Python", icon: "icons/python.png" },
+  { name: "Excel", icon: "icons/excel.png" },
+  { name: "MySQL", icon: "icons/dados.png" },
+  { name: "PostgreSQL", icon: "icons/dados.png" },
+  { name: "Git", icon: "icons/git.png" },
+  { name: "GitHub", icon: "icons/github.png" },
 ];
 
 const projects = [
@@ -20,7 +20,6 @@ const projects = [
     githubLink: "",
     demoLink: "",
   },
- 
 ];
 
 // Renderizar skills
@@ -30,7 +29,7 @@ skills.forEach((skill) => {
   skillCard.className = "skill-card";
   skillCard.innerHTML = `
       <div class="skill-icon">
-        <i class="${skill.icon}"></i>
+        <img src="${skill.icon}">
       </div>
       <div class="skill-name">${skill.name}</div>
     `;
@@ -73,31 +72,6 @@ projects.forEach((project) => {
   projectsGrid.appendChild(projectCard);
 });
 
-// Contato
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    // Simulação de envio
-    const submitBtn = this.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-
-    // Simular delay de rede
-    setTimeout(() => {
-      submitBtn.innerHTML = '<i class="fas fa-check"></i> Enviado!';
-
-      // Reset após 2 segundos
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-        this.reset();
-      }, 2000);
-    }, 1500);
-  });
 
 // Menu mobile
 const menuToggle = document.querySelector(".menu-toggle");
