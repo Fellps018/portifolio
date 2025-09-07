@@ -45,8 +45,10 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--darker);
-    color: var(--light);
+    background-image: url(images/macbook-computer-laptop-technology.jpg);
+    background-position: center;
+    background-size: cover;
+    color: black;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -84,34 +86,32 @@ a {
 .btn-primary {
     background-color: black;
     color: white;
-    border: solid 1px white;
+    border: solid 1px rgba(0, 0, 0, 0);
+    box-shadow: 5px 15px 50px 1px #121212;
 }
 
 .btn-primary:hover {
     background-color: white;
     color: black;
     border: solid 1px black;
+    box-shadow: 5px 15px 48px 1px #12121200;
 }
 
 .btn-primary:active {
-    background-color: rgba(187, 187, 187, 0.596);
-    color: rgb(0, 0, 0);
-    border: solid 1px white;
+    background-color: #1212123f;
 }
 
 .btn-secondary {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.452);
+    backdrop-filter: blur(24px);
     color: var(--light);
     border: 1px solid var(--light);
     border: none;
 }
 
 .btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.301);
     border: none;
-}
-.btn-secondary:active {
-    background-color: rgba(255, 255, 255, 0.39);
 }
 
 .btn-block {
@@ -121,15 +121,14 @@ a {
 
 /* Header */
 .header {
-    position: fixed;
+    position:fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.836);
-    backdrop-filter: blur(32px);
+    background-color: rgb(255, 255, 255);
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 1rem 0;
+    box-shadow: 0 0 12px rgba(29, 29, 29, 0.548);
+    
 }
 
 .header-container {
@@ -138,39 +137,31 @@ a {
     padding: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--light);
-}
-
-.logo span {
-    color: var(--primary);
+    justify-content: center;
 }
 
 .nav {
     display: flex;
-    gap: 1.5rem;
 }
 
 .nav-link {
-    color: var(--gray);
+    color: black;
     font-weight: 500;
     display: flex;
+    padding: 10px;
+    padding: 0 40px 0 40px;
     margin: 0;
     align-items: center;
+    height: 60px;
+    width: auto;
     gap: 0.5rem;
     transition: 400ms;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: white;
-    transition: 400ms;
-    padding: 0;
+.nav-link:hover{
+    transition: 250ms;
+    background-color: #12121277;
+    color: #f5f5f5;
 }
 
 .menu-toggle {
@@ -204,7 +195,7 @@ a {
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    background-color: whitesmoke;
+    background-color: rgb(0, 0, 0);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -212,7 +203,7 @@ a {
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: var(--gray);
+    color: rgb(41, 41, 41);
     margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
@@ -234,15 +225,6 @@ a {
     animation: bounce 2s infinite;
 }
 
-.wapaper {
-    position: absolute;
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.24)89%, rgba(0, 0, 0, 0.623)8%, black 2%);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1.5;
-}
 
 .about-wall {
     position: absolute;
@@ -253,7 +235,7 @@ a {
 }
 
 .hero-scroll a {
-    color: var(--light);
+    color: rgb(44, 44, 44);
     font-size: 1.5rem;
     transition: color 0.3s;
 }
@@ -545,14 +527,15 @@ a {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     z-index: 2;
+    color: white;
 }
 
 .footer-logo span {
-    color: var(--primary);
+    color: white;
 }
 
 .footer-logo p {
-    color: var(--gray);
+    color: rgb(172, 172, 172);
 }
 
 .footer-links h4,
@@ -569,10 +552,11 @@ a {
 
 .footer-links li {
     margin-bottom: 0.75rem;
+    color: white;
 }
 
 .footer-links a {
-    color: var(--gray);
+    color: white;
     transition: color 0.3s;
 }
 
