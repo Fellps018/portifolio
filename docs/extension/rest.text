@@ -1,0 +1,74 @@
+//html - skills:
+
+    <section id="skills" class="skills section">
+      <div class="section-container">
+        <h2 class="section-title">Minhas Skills</h2>
+        <div class="skills-grid">
+          <!-- Será preenchido pelo JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    //html - style.css:
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.skill-card {
+    background-color: rgba(5, 5, 5, 0.719);
+    backdrop-filter: blur(38px);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-22px);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}.skill-card:hover {
+    background-color: rgba(24, 24, 24, 0.568);
+}
+
+.skill-name {
+    font-weight: 500;
+}
+
+//skills js:
+// Dados simulados
+const skills = [
+  { name: "Java", icon: "icons/java.png" },
+  { name: "Spring Boot", icon: "icons/spring.png" },
+  { name: "REST APIs", icon: "icons/nuvem.png" },
+  { name: "Python", icon: "icons/python.png" },
+  { name: "Excel", icon: "icons/excel.png" },
+  { name: "MySQL", icon: "icons/dados.png" },
+  { name: "PostgreSQL", icon: "icons/dados.png" },
+  { name: "Git", icon: "icons/git.png" },
+  { name: "GitHub", icon: "icons/github.png" },
+];
+
+// Renderizar skills
+const skillsGrid = document.querySelector(".skills-grid");
+skills.forEach((skill) => {
+  const skillCard = document.createElement("div");
+  skillCard.className = "skill-card";
+  skillCard.innerHTML = `
+      <div class="skill-icon">
+        <img src="${skill.icon}">
+      </div>
+      <div class="skill-name">${skill.name}</div>
+    `;
+  skillsGrid.appendChild(skillCard);
+});
+
+
+

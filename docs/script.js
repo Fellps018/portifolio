@@ -1,40 +1,27 @@
-// Dados simulados
-const skills = [
-  { name: "Java", icon: "icons/java.png" },
-  { name: "Spring Boot", icon: "icons/spring.png" },
-  { name: "REST APIs", icon: "icons/nuvem.png" },
-  { name: "Python", icon: "icons/python.png" },
-  { name: "Excel", icon: "icons/excel.png" },
-  { name: "MySQL", icon: "icons/dados.png" },
-  { name: "PostgreSQL", icon: "icons/dados.png" },
-  { name: "Git", icon: "icons/git.png" },
-  { name: "GitHub", icon: "icons/github.png" },
-];
-
 const projects = [
   {
     title: "",
-    description:
-      "",
+    description: "",
     technologies: ["", "", "", ""],
     githubLink: "",
     demoLink: "",
   },
+  {
+    title: "",
+    description: "",
+    technologies: ["", "", "", ""],
+    githubLink: "",
+    demoLink: "",
+  },
+  {
+    title: "",
+    description: "",
+    technologies: ["", "", "", ""],
+    githubLink: "",
+    demoLink: "",
+  }
 ];
 
-// Renderizar skills
-const skillsGrid = document.querySelector(".skills-grid");
-skills.forEach((skill) => {
-  const skillCard = document.createElement("div");
-  skillCard.className = "skill-card";
-  skillCard.innerHTML = `
-      <div class="skill-icon">
-        <img src="${skill.icon}">
-      </div>
-      <div class="skill-name">${skill.name}</div>
-    `;
-  skillsGrid.appendChild(skillCard);
-});
 
 // Renderizar projetos
 const projectsGrid = document.querySelector(".projects-grid");
