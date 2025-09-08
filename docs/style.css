@@ -571,16 +571,16 @@ a {
 }
 
 .project-card {
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(179, 179, 179);
     border-radius: 0.5rem;
     overflow: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.089);
+    box-shadow: 10px 12px 12px rgba(29, 29, 29, 0.548);
 }
 
 .project-card:hover {
     transform: translateY(-20px);
-    box-shadow: 8px 12px 15px 2px rgba(36, 34, 34, 0.849);
+    box-shadow: 8px 12px 10px 2px rgba(36, 34, 34, 0.849);
 }
 #projects-title{
     position: relative;
@@ -589,20 +589,42 @@ a {
 .projects-link{
     position: relative;
     top: 3rem;
+    text-decoration: #121212;
+    padding: 10px;
+    font-weight: bold;
     left: 45%;
 }
-.projects-link:hover{
-    text-decoration: #121212;
-    font-weight: bold;
+.projects-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
 }
 
+.projects-link:hover {
+    color: #fff;
+}
+
+.projects-link:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
 .project-image {
     height: 200px;
-    background-color: var(--dark);
+    background-color: rgba(243, 233, 218, 0.801);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--gray);
+    color: rgba(0, 0, 0, 0.692);
 }
 
 .project-content {
@@ -645,14 +667,18 @@ a {
 .project-link {
     display: flex;
     align-items: center;
+    padding: 5px;
+    border-radius: 12px;
     gap: 0.5rem;
-    color: gray;
+    color: rgba(0, 0, 0, 0.692);
     font-weight: 500;
-    transition: color 0.3s;
+    transition: 0.4s;
 }
 
 .project-link:hover {
-    color: white;
+    background-color: #12121269;
+}.project-link:active {
+    background-color: #1212128a;
 }
 
 
