@@ -81,3 +81,5 @@ document.querySelectorAll(".nav-link").forEach((link) => {
 
 // Ano automático
 document.getElementById("year").textContent = new Date().getFullYear();
+
+
