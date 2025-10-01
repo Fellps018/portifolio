@@ -71,14 +71,12 @@ const nav = document.querySelector(".nav");
 menuToggle.addEventListener("click", () => {
   nav.classList.toggle("active");
   aba.style.top = "0px";
-  menuToggle.innerHTML = nav.classList.contains("active")
 });
 
 // Fechar menu ao clicar em um link
 document.querySelectorAll(".nav-link").forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("active");
-    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
     aba.style.top = "-1000000000px";
   });
 });
