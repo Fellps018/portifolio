@@ -72,8 +72,8 @@ menuToggle.addEventListener("click", () => {
   nav.classList.toggle("active");
   aba.style.top = "0px";
   menuToggle.innerHTML = nav.classList.contains("active")
-    ? '<i class="fas fa-times"></i>'
-    : '<i class="fas fa-bars"></i>', aba.style.top = "-1000000000px";
+    ? '<i class="fas fa-times"></i>', aba.style.top = "-1000000000px";
+    : '<i class="fas fa-bars"></i>';
 });
 
 // Fechar menu ao clicar em um link
