@@ -682,7 +682,7 @@
     @media (max-width: 768px) {
 .nav {
         position: fixed;
-        top: 80px;
+        top: 0px;
         left: 0;
         width: 100%;
         right: 0;
