@@ -60,12 +60,17 @@ projects.forEach((project) => {
 });
 
 
-// Menu mobile
+const btn = document.querySelector(".menu-toggle");
+const aba = document.querySelector(".aba-toggle");
+const menu = document.querySelector(".nav");
+
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 
+//open menu
 menuToggle.addEventListener("click", () => {
   nav.classList.toggle("active");
+  aba.style.top = "0px";
   menuToggle.innerHTML = nav.classList.contains("active")
     ? '<i class="fas fa-times"></i>'
     : '<i class="fas fa-bars"></i>';
@@ -76,7 +81,15 @@ document.querySelectorAll(".nav-link").forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("active");
     menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    aba.style.top = "-1000000000px";
   });
+});
+
+//fechar
+aba.addEventListener("click", function () {
+  aba.style.top = "-1000000000px";
+  nav.classList.remove("active");
+  menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
 });
 
 // Ano automático
